@@ -27,7 +27,11 @@ export default class ExtractionDocument extends Document<{ emotionStyleTags: any
     ctx.renderPage = () => {
       return renderPage({
         enhanceApp: App => function EnhanceApp(props) {
-          return <App emotionCache={cache} {...props} />;
+          // Type of `App` does not expect `emotionCache`.
+          // Use destructing to bypass this limitation, 
+          // as it is actually used.
+          const extraProps = { emotionCache: cache };
+          return <App {...props} {...extraProps} />;
         }
       });
     };
