@@ -2,13 +2,16 @@
 import type { AppProps } from 'next/app';
 import { CacheProvider } from "@emotion/react";
 import createCache, { EmotionCache } from "@emotion/cache";
+import { Theme } from "$/theme";
 
 const clientCache = createCache({ key: "css", prepend: true });
 
 function MyApp(props: AppProps & { emotionCache: EmotionCache }) {
   const { Component, emotionCache = clientCache, pageProps } = props;
   return <CacheProvider value={emotionCache}>
-    <Component {...pageProps} />
+    <Theme>
+      <Component {...pageProps} />
+    </Theme>
   </CacheProvider>
 }
 
