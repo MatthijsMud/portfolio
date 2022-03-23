@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import Head from "next/head";
 import { Global, ThemeProvider, FunctionInterpolation, useTheme } from "@emotion/react";
 import "@fontsource/dm-sans";
 
@@ -28,6 +29,9 @@ const defaultTheme = {
 
 export const Theme: FC = (props) => {
   return <ThemeProvider theme={defaultTheme}>
+    <Head>
+      <meta name="theme-color" content={"#111"} />
+    </Head>
     <Global styles={globalStyles} />
     {props.children}
   </ThemeProvider>
