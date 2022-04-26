@@ -36,3 +36,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# "Weird" project specific ignores.
+
+# Content is stored in a separate branch, 
+# but can be checkout out in a relative folder.
+/content/
