@@ -10,9 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.1.2",
     "@emotion/react": "^11.8.2",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/dm-mono": "^4.5.7",
     "@fontsource/dm-sans": "^4.5.3",
     "@next/mdx": "^12.1.0",
     "mdast-util-to-hast": "^12.1.1",
@@ -23,6 +25,7 @@
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-ssr-prepass": "npm:preact-ssr-prepass",
+    "rehype-highlight": "^5.0.2",
     "rehype-react": "^7.0.4",
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^4.0.1",
