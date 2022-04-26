@@ -28,8 +28,8 @@ declare namespace Home {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const file = await getBySlug("Home.md");
-  const frontmatter = await extractFrontmatter(file);
+  const file = await getBySlug("/");
+  const frontmatter = file?.metadata;
   return {
     props: {
       ...frontmatter as any
