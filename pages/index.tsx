@@ -1,6 +1,6 @@
 import type { NextPage, GetStaticProps } from 'next';
 import Head from "next/head";
-import { getBySlug, extractFrontmatter } from "$/content";
+import { getBySlug } from "$/content";
 
 const Home: NextPage<Home.Props> = (props) => {
   const { 
