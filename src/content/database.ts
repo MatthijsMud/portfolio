@@ -3,6 +3,8 @@ import { from, share, lastValueFrom } from "rxjs";
 import { tap, mergeMap, filter, toArray } from "rxjs/operators";
 import { join } from "path";
 
+import { parse } from "./markdown";
+
 const isHidden = (path: string): boolean => /^\./.test(path);
 
 async function* files(root: string) {
@@ -29,16 +31,15 @@ async function* files(root: string) {
 }
 
 export const db = (async () => {
-  console.log("Creating database");
   const index = from(files(join(process.cwd(), "content"))).pipe(
     share(),
   );
-  const markdown = lastValueFrom(index.pipe(
+  const markdown = await lastValueFrom(index.pipe(
     filter(path => /\.md$/.test(path)),
     mergeMap(path => readFile(path, { encoding: "utf-8"})),
-
+    mergeMap(parse),
     toArray(),
   ));
-  const a = await Promise.all([markdown, ]);
-  return {  };
+  return { markdown };
 })();
+
