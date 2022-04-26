@@ -4,6 +4,10 @@ const withPreact = require("next-plugin-preact");
 const nextConfig = withPreact({
   reactStrictMode: true,
   basePath: "/portfolio",
+  images: {
+    loader: "custom",
+    path: "/portfolio",
+  }
 });
 
 module.exports = nextConfig
