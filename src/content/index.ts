@@ -1,2 +1,2 @@
+export * from "./getAllSlugs";
 export * from "./getBySlug";
-export * from "./extractFrontMatter";
