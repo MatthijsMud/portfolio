@@ -1,16 +1,21 @@
 ---
+slug: "/projects/portfolio"
 title: "Portfolio"
-description: ""
+description: "Een soort van CMS opzetten met onder andere React en Next.js"
 tags: 
   - TypeScript
   - React
+status: "draft"
+banner:
+  src: ""
+  description: ""
 ---
 
 # Portfolio
 
 Deze website is met behulp van verschillende tecnhieken opgezet. Hieronder vallen:
 
-- [TypeScript](): Het toevoegen van type informatie aan de gebruikte variabelen/functie helpt met schrijven van correcte code.
+- [TypeScript][typescript]: Het toevoegen van type informatie aan de gebruikte variabelen/functie helpt met schrijven van correcte code.
 - [Next.js](https://nextjs.org/): 
 - [Preact](https://preactjs.com/): In principe [React](https://reactjs.org/), alleen is de bundel stuk kleiner. Hierdoor zou de site sneller moeten laden.
 - [Emotion](https://emotion.sh/docs/introduction): CSS in JS oplossing. Voor het schrijven van een stylesheet 
@@ -31,3 +36,5 @@ Buiten de bovengenoemde opties bestaat ook een breed assortiment aan paketten vo
 1. Het is leerzamer.
 1. De website kan inzicht geven in de bedrevenheid.
 1. Een template naar wens maken heeft meestal toch wat voeten in de aarde.
+
+[typescript]: https://www.typescriptlang.org/
