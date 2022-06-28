@@ -19,14 +19,14 @@ const A = styled("a")({
  * Uniform link component for linking to both internal
  * as external links. 
  */
-export const Link: FC<LinkProps> = (props) => {
-  const { children, href, ...link } = props; 
+export const Link: FC<LinkProps & { className?: string }> = (props) => {
+  const { children, href, className, ...link } = props;
 
   if (typeof href === "string" && isExternal.test(href)) {
-    return <A href={href}>{children}</A>
+    return <A className={className} href={href}>{children}</A>
   }
   return <NextLink {...link} href={href} passHref>
-    <A>
+    <A className={className}>
       {children}
     </A>
   </NextLink>
