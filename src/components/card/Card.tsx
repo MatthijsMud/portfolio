@@ -7,6 +7,9 @@ export const Card = styled("div")<{ interactive?: boolean }>(({ interactive }) =
     borderRadius: "2px",
     overflow: "hidden",
     backgroundColor: "transparent",
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1,
     transition: "box-shadow ease-in-out 0.2s, background-color ease-in-out 0.2s",
     ...(interactive && { 
         "&:hover": {
