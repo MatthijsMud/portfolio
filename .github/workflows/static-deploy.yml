@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main, content ]
+    branches: [ main, content, public ]
 
 jobs:
   build:
@@ -26,6 +26,12 @@ jobs:
       with:
         ref: content
         path: content
+
+    - name: "Checkout Media (public folder)"
+      uses: actions/checkout@v3
+      with:
+        ref: public
+        path: public
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
