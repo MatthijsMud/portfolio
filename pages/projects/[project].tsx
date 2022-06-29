@@ -24,10 +24,10 @@ const ProjectPage: NextPage<ProjectPage.Props> = (props) => {
       <title>{props.title}</title>
     </Head>
     <Body>
-      <Image aspect={16 / 9} src="/banners/Default.svg" alt={props.banner?.description} />
+      <Image aspect={16 / 9} src={props.banner?.src || "/banners/Default.svg"} alt={props.banner?.description} />
       
       <main style={{ padding: "2rem" }}>
-        <MarkdownComponents components={{ a: Link }}>
+        <MarkdownComponents components={{ a: Link, img: Image }}>
           <Markdown ast={props.ast} />
         </MarkdownComponents>
       </main>
@@ -41,6 +41,7 @@ declare namespace ProjectPage {
     tags?: string[];
     title?: string;
     banner?: {
+      src?: string;
       description?: string;
     };
   }
