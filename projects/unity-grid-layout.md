@@ -1,14 +1,14 @@
 ---
 slug: "/projects/unity-grid-layout"
 title: "Unity grid layout"
-description: ""
+description: "Unity container voor het flexibel uitlijnen van componenten in een raster."
 status: "published"
 tags:
 - Unity
 - C#
 banner:
   src: "/unity/grid/preview.png"
-  description: ""
+  description: "Unity container voor het flexibel uitlijnen van componenten in een raster."
 ---
 
 # Unity grid layout
