@@ -25,7 +25,7 @@ const ProjectsPage: NextPage<ProjectsPage.Props> = (props) => {
       <meta name="description" content="Overview of projects that have been worked on." />
     </Head>
     <TilePage tiles={props.metadata.map(page => ({ 
-      banner: page.banner.src || "banner/Default.svg",
+      banner: page.banner.src || "banners/Default.svg",
       href: page.slug, 
       title: page.title ,
       description: page.description,
